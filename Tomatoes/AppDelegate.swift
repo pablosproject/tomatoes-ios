@@ -15,7 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let service = NetworkService()
+        if service.isLogged() {
+            print("Logged!")
+        }
+        else {
+            print("Not Logged")
+            service.login(username: "pablosproject", password: "paolito@87") { result in
+                print("Login executed")
+            }
+        }
         return true
     }
 

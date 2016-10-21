@@ -10,9 +10,11 @@
 		5216DA2A1DB913C800E16AB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216DA291DB913C800E16AB0 /* AppDelegate.swift */; };
 		5216DA2C1DB913C800E16AB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216DA2B1DB913C800E16AB0 /* ViewController.swift */; };
 		5216DA2F1DB913C800E16AB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5216DA2D1DB913C800E16AB0 /* Main.storyboard */; };
-		5216DA311DB913C800E16AB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5216DA301DB913C800E16AB0 /* Assets.xcassets */; };
 		5216DA341DB913C800E16AB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5216DA321DB913C800E16AB0 /* LaunchScreen.storyboard */; };
+		5216DA3C1DB92A2F00E16AB0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216DA3B1DB92A2F00E16AB0 /* NetworkService.swift */; };
+		5216DA421DB92EA200E16AB0 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216DA411DB92EA200E16AB0 /* Session.swift */; };
 		59C09E3A01DB08296E108809 /* Pods_Tomatoes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F4E3A5DF6AA4AB9ED914B3 /* Pods_Tomatoes.framework */; };
+		6580E343E909D92D8D514575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6580E5767A36090B8DDC2612 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +24,12 @@
 		5216DA291DB913C800E16AB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5216DA2B1DB913C800E16AB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5216DA2E1DB913C800E16AB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5216DA301DB913C800E16AB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5216DA331DB913C800E16AB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5216DA351DB913C800E16AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5216DA3B1DB92A2F00E16AB0 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		5216DA411DB92EA200E16AB0 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		5285CB131DBAC65100A86A1A /* Tomatoes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tomatoes.entitlements; sourceTree = "<group>"; };
+		6580E5767A36090B8DDC2612 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB5003CDC0EC3F724DE87AC1 /* Pods-Tomatoes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tomatoes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tomatoes/Pods-Tomatoes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,14 +83,25 @@
 		5216DA281DB913C800E16AB0 /* Tomatoes */ = {
 			isa = PBXGroup;
 			children = (
+				5285CB131DBAC65100A86A1A /* Tomatoes.entitlements */,
 				5216DA291DB913C800E16AB0 /* AppDelegate.swift */,
 				5216DA2B1DB913C800E16AB0 /* ViewController.swift */,
 				5216DA2D1DB913C800E16AB0 /* Main.storyboard */,
-				5216DA301DB913C800E16AB0 /* Assets.xcassets */,
 				5216DA321DB913C800E16AB0 /* LaunchScreen.storyboard */,
 				5216DA351DB913C800E16AB0 /* Info.plist */,
+				6580E21DBC18E950B006F4AB /* Resources */,
+				5216DA3B1DB92A2F00E16AB0 /* NetworkService.swift */,
+				5216DA411DB92EA200E16AB0 /* Session.swift */,
 			);
 			path = Tomatoes;
+			sourceTree = "<group>";
+		};
+		6580E21DBC18E950B006F4AB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6580E5767A36090B8DDC2612 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +139,14 @@
 				TargetAttributes = {
 					5216DA251DB913C800E16AB0 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5394SRVARW;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -151,8 +174,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5216DA341DB913C800E16AB0 /* LaunchScreen.storyboard in Resources */,
-				5216DA311DB913C800E16AB0 /* Assets.xcassets in Resources */,
 				5216DA2F1DB913C800E16AB0 /* Main.storyboard in Resources */,
+				6580E343E909D92D8D514575 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +234,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5216DA421DB92EA200E16AB0 /* Session.swift in Sources */,
 				5216DA2C1DB913C800E16AB0 /* ViewController.swift in Sources */,
+				5216DA3C1DB92A2F00E16AB0 /* NetworkService.swift in Sources */,
 				5216DA2A1DB913C800E16AB0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +359,8 @@
 			baseConfigurationReference = FB5003CDC0EC3F724DE87AC1 /* Pods-Tomatoes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tomatoes/Tomatoes.entitlements;
+				DEVELOPMENT_TEAM = 5394SRVARW;
 				INFOPLIST_FILE = Tomatoes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.tomato.Tomatoes;
@@ -347,6 +374,8 @@
 			baseConfigurationReference = 23B198D24A416FF4966C47A6 /* Pods-Tomatoes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tomatoes/Tomatoes.entitlements;
+				DEVELOPMENT_TEAM = 5394SRVARW;
 				INFOPLIST_FILE = Tomatoes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.tomato.Tomatoes;
