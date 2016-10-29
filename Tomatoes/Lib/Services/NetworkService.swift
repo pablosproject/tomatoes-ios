@@ -77,11 +77,17 @@ enum Router: URLRequestConvertible {
 class NetworkService {
     
     private var currentSession = URLSession()
-    
+
+    //MARK: login management
     public func isLogged () -> Bool {
         return currentSession.isLogged
     }
-    
+
+    public func logout () {
+        currentSession.logout()
+    }
+
+    //MARK: API management
     //TODO: pass error
     public func login(username:String!, password:String!, completion:@escaping (_:Bool) -> Void) {
         let openSession:(_ githubToken:String, _ completion: (_:(Bool) -> Void)) -> Void  = { githubToken, completion in
