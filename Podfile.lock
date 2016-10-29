@@ -4,19 +4,22 @@ PODS:
     - Alamofire (~> 4.0)
     - ObjectMapper (~> 2.0)
   - KeychainSwift (7.0.0)
-  - ObjectMapper (2.1.0)
+  - ObjectMapper (2.2.0)
+  - PKHUD (4.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - AlamofireObjectMapper (~> 4.0)
   - KeychainSwift (~> 7.0)
+  - PKHUD (~> 4.0)
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   AlamofireObjectMapper: 9faa3ce5a240efda1b209009a2d6e1e949227abc
   KeychainSwift: b6947435dd78cc442c64a84ae648dd0e871cf448
-  ObjectMapper: e5e0f8aef8590fc2ddcde7f27eddb255863ee6e9
+  ObjectMapper: 4060d739febae11ab0c6af8d786f98667c82e1bd
+  PKHUD: 2bb45c936bb8afa39f3cd33ec14e8cc89f624255
 
-PODFILE CHECKSUM: c7be262a828d69e6ffc54d8607ec24fa649042ea
+PODFILE CHECKSUM: 93b84080dc5121695d6c0841ba2ebee60a67211d
 
 COCOAPODS: 1.0.1

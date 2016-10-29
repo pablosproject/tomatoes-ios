@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PKHUD
 
 class LoginViewController: UIViewController {
 
@@ -30,7 +31,9 @@ class LoginViewController: UIViewController {
             return;
         }
         
+        HUD.show(.progress)
         ServiceProvider.sharedInstance.networkService.login(username: username, password: password) { success in
+            HUD.hide()
             if  success {
                 self.dismiss(animated: true, completion: nil)
             }
