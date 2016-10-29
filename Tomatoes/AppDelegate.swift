@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let service = NetworkService()
         if service.isLogged() {
             print("Logged!")
+            service.user()
         }
         else {
             print("Not Logged")

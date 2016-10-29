@@ -22,13 +22,13 @@ class URLSession {
         }
     }
     
-    public var isLogged:Bool {
-        return userSessionToken != nil;
-    }
-    
     init(){
         let keychain = KeychainSwift()
         self.userSessionToken = keychain.get("es.tomatoe.tomatoes-token")
+    }
+    
+    public var isLogged:Bool {
+        return userSessionToken != nil;
     }
     
     public func logout(){

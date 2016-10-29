@@ -5,5 +5,7 @@ target 'Tomatoes' do
 
   pod 'Alamofire', '~> 4.0'
   pod 'KeychainSwift', '~> 7.0'
+  pod 'AlamofireObjectMapper', '~> 4.0'
+
 
 end
