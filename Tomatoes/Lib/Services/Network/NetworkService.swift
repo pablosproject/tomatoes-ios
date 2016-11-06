@@ -123,27 +123,28 @@ class NetworkService {
             switch response.result {
             case .success :
                 guard let JSON = response.result.value as? NSDictionary, let token = JSON["token"] as? String else {
-                    completion(false)
+                    completion(true)
                     return
                 }
                 openSession(token, completion)
             case .failure(let error) :
                 print(error)
-                completion(true)
+                completion(false)
             }
         }
     }
     
-    public func user(){
+    public func user(_ completion:@escaping (User?, Error?) -> () ){
         let parameters  = self.tokenParameter()
         Alamofire.request(Router.getUser(parameters: parameters)).validate().responseObject{(response: DataResponse<User>) in
             switch response.result {
             case .success :
                 let user = response.result.value
                 print (user)
+                completion(user, nil)
             case .failure(let error) :
                 print(error)
-                //TODO
+                completion(nil, error)
             }
         }
     }

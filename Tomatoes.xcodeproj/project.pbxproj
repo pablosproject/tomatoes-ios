@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		5216DA2A1DB913C800E16AB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216DA291DB913C800E16AB0 /* AppDelegate.swift */; };
 		52AE684A1DBEA42500D63152 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AE68491DBEA42500D63152 /* Provider.swift */; };
+		52C198041DC4E4A70034209E /* PomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C198031DC4E4A70034209E /* PomodoroViewController.swift */; };
+		52C198061DC4E4E10034209E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C198051DC4E4E10034209E /* SettingsViewController.swift */; };
+		52C198081DC4E6F00034209E /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C198071DC4E6F00034209E /* CounterViewController.swift */; };
+		52E0E9A31DCF3B6200ABE7B7 /* PomodoroSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E0E9A21DCF3B6200ABE7B7 /* PomodoroSession.swift */; };
 		59C09E3A01DB08296E108809 /* Pods_Tomatoes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F4E3A5DF6AA4AB9ED914B3 /* Pods_Tomatoes.framework */; };
 		6580E343E909D92D8D514575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6580E5767A36090B8DDC2612 /* Assets.xcassets */; };
 		6580E4695B164549EDBC84E2 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6580E95397CD07D75FA9D0A0 /* ServiceProvider.swift */; };
@@ -26,16 +30,20 @@
 		5216DA261DB913C800E16AB0 /* Tomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomatoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5216DA291DB913C800E16AB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52AE68491DBEA42500D63152 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		52C198031DC4E4A70034209E /* PomodoroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroViewController.swift; sourceTree = "<group>"; };
+		52C198051DC4E4E10034209E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		52C198071DC4E6F00034209E /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		52E0E9A21DCF3B6200ABE7B7 /* PomodoroSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PomodoroSession.swift; path = "Pomodoro Session/PomodoroSession.swift"; sourceTree = "<group>"; };
 		6580E5767A36090B8DDC2612 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6580E6FB0A89720D00CD905D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		6580E732EF4CFB5D01963C59 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		6580E732EF4CFB5D01963C59 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = Network/NetworkService.swift; sourceTree = "<group>"; };
 		6580E8B7FE87F606FB43C06C /* Tomatoes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = file.entitlements; path = Tomatoes.entitlements; sourceTree = "<group>"; };
 		6580E95397CD07D75FA9D0A0 /* ServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		6580ED2850347B1406165B89 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		6580EE2BD29D0366AE7CF2C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Tomatoes/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		6580EE45DA6497A5B69242FF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6580EF3D568BD575F6666964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Tomatoes/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
-		6580EF44BC0159DC1469DE2C /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		6580EF44BC0159DC1469DE2C /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Network/Session.swift; sourceTree = "<group>"; };
 		FB5003CDC0EC3F724DE87AC1 /* Pods-Tomatoes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tomatoes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tomatoes/Pods-Tomatoes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,13 +98,30 @@
 			isa = PBXGroup;
 			children = (
 				5216DA291DB913C800E16AB0 /* AppDelegate.swift */,
-				6580E21DBC18E950B006F4AB /* Resources */,
-				6580E28990460983D0909A15 /* Models */,
 				6580E19547E345108B035628 /* Controllers */,
 				6580EAC4B116FBEA5100E1B9 /* Lib */,
+				6580E28990460983D0909A15 /* Models */,
+				6580E21DBC18E950B006F4AB /* Resources */,
 				6580E1007C61869B640818E7 /* Supporting Files */,
 			);
 			path = Tomatoes;
+			sourceTree = "<group>";
+		};
+		52E0E9A01DCF3B1A00ABE7B7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6580E732EF4CFB5D01963C59 /* NetworkService.swift */,
+				6580EF44BC0159DC1469DE2C /* Session.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		52E0E9A11DCF3B2A00ABE7B7 /* Pomodoro Session */ = {
+			isa = PBXGroup;
+			children = (
+				52E0E9A21DCF3B6200ABE7B7 /* PomodoroSession.swift */,
+			);
+			name = "Pomodoro Session";
 			sourceTree = "<group>";
 		};
 		6580E1007C61869B640818E7 /* Supporting Files */ = {
@@ -112,6 +137,9 @@
 			isa = PBXGroup;
 			children = (
 				6580EE45DA6497A5B69242FF /* LoginViewController.swift */,
+				52C198031DC4E4A70034209E /* PomodoroViewController.swift */,
+				52C198051DC4E4E10034209E /* SettingsViewController.swift */,
+				52C198071DC4E6F00034209E /* CounterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -155,8 +183,8 @@
 		6580ED1C8C0A9491164E1765 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				6580E732EF4CFB5D01963C59 /* NetworkService.swift */,
-				6580EF44BC0159DC1469DE2C /* Session.swift */,
+				52E0E9A11DCF3B2A00ABE7B7 /* Pomodoro Session */,
+				52E0E9A01DCF3B1A00ABE7B7 /* Network */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -291,13 +319,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E0E9A31DCF3B6200ABE7B7 /* PomodoroSession.swift in Sources */,
 				5216DA2A1DB913C800E16AB0 /* AppDelegate.swift in Sources */,
 				52AE684A1DBEA42500D63152 /* Provider.swift in Sources */,
 				6580EC3828A120E9A7F2DD33 /* User.swift in Sources */,
 				6580E4695B164549EDBC84E2 /* ServiceProvider.swift in Sources */,
 				6580E754125FFDB285393F6B /* NetworkService.swift in Sources */,
+				52C198081DC4E6F00034209E /* CounterViewController.swift in Sources */,
+				52C198041DC4E4A70034209E /* PomodoroViewController.swift in Sources */,
 				6580EEAE664BD9C659E76530 /* Session.swift in Sources */,
 				6580E47EF0F52D40E7194539 /* LoginViewController.swift in Sources */,
+				52C198061DC4E4E10034209E /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

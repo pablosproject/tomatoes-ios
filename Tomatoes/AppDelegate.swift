@@ -16,9 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let networkService = ServiceProvider.sharedInstance.networkService
 
-        //TODO: debug purpose only, remove when login feature is completed
-        networkService.logout()
-
         if networkService.isLogged() {
             print("User is logged in.")
         }

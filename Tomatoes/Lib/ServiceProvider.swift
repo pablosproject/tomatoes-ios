@@ -12,6 +12,7 @@ class ServiceProvider {
     static let sharedInstance = ServiceProvider()
     
     public let networkService = NetworkService()
+    public let pomodoroSession = PomodoroSession()
     
     //Override private init to avoid other call it
     private init () {}

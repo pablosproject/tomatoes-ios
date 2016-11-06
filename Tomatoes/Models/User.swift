@@ -6,6 +6,21 @@
 import Foundation
 import ObjectMapper
 
+struct TomatoesCounter : Mappable {
+    public var day:Int?
+    public var week:Int?
+    public var month:Int?
+    
+    init?(map: Map) {
+    }
+    
+    mutating func mapping(map: Map) {
+        day <- map["day"]
+        week <- map["week"]
+        month <- map["month"]
+    }
+}
+
 struct User : Mappable {
     public var id: String?
     public var name: String?
@@ -19,6 +34,7 @@ struct User : Mappable {
     public var currency: String?
     public var currencyUnit: String?
     public var providers: [Provider]?
+    public var counters:TomatoesCounter?
     
     init?(map: Map) {
         
@@ -37,5 +53,6 @@ struct User : Mappable {
         currency <- map["currency"]
         currencyUnit <- map["currency_unit"]
         providers <- map["authorizations"]
+        counters <- map["tomatoes_counters"]
     }
 }
